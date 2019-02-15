@@ -8,6 +8,12 @@ public class ArraysUtils {
         System.out.println(asString(array));
     }
 
+    public static void print(String[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+
     public static String asString(int[] array) {
         StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < array.length; i++) {
