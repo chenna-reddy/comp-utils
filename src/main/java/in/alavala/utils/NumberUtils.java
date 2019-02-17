@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class NumberUtils {
 
-    static Map<Integer, String> strings = new HashMap<Integer, String>() {{
+    static Map<Integer, String> labels = new HashMap<Integer, String>() {{
         put(0, "zero");
         put(1, "one");
         put(2, "two");
@@ -44,7 +44,7 @@ public class NumberUtils {
 
     public static void main(String[] args) {
         for (int i=0; i<=100; i++) {
-            System.out.println(strings.get(i));
+            System.out.println(labels.get(i));
         }
     }
 

@@ -9,15 +9,15 @@ public class ArraysUtils {
     }
 
     public static void print(String[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        for (String s : array) {
+            System.out.println(s);
         }
     }
 
     public static String asString(int[] array) {
         StringBuilder sb = new StringBuilder("[");
-        for (int i = 0; i < array.length; i++) {
-            sb.append(array[i]);
+        for (int i : array) {
+            sb.append(i);
             sb.append(' ');
         }
         sb.append(']');

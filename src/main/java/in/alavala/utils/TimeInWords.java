@@ -5,18 +5,18 @@ import java.util.Map;
 
 public class TimeInWords {
 
-    static Map<Integer, String> strings = NumberUtils.strings;
+    static Map<Integer, String> numberLabels = NumberUtils.labels;
 
 
     static String minutesPast(int i) {
-        return strings.get(i) + " minutes past";
+        return numberLabels.get(i) + " minutes past";
     }
 
     static String minutesTo(int i) {
-        return strings.get(60 - i) + " minutes to";
+        return numberLabels.get(60 - i) + " minutes to";
     }
 
-    static Map<Integer, String> labels = new HashMap<Integer, String>() {{
+    static Map<Integer, String> timLabels = new HashMap<Integer, String>() {{
         put(0, "o' clock");
         put(1, "one minute past");
         for (int i = 2; i < 15; i++) {
@@ -39,13 +39,13 @@ public class TimeInWords {
     // Complete the timeInWords function below.
     static String timeInWords(int h, int m) {
         if (m == 0) {
-            return strings.get(h) + " " + labels.get(m);
+            return numberLabels.get(h) + " " + timLabels.get(m);
         } else if (m <= 30) {
-            return labels.get(m) + " " + strings.get(h);
+            return timLabels.get(m) + " " + numberLabels.get(h);
         } else if (h == 12) {
-            return labels.get(m) + " " + strings.get(1);
+            return timLabels.get(m) + " " + numberLabels.get(1);
         } else {
-            return labels.get(m) + " " + strings.get(h + 1);
+            return timLabels.get(m) + " " + numberLabels.get(h + 1);
         }
     }
 
